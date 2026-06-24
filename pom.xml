@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.13</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.whaleal.third</groupId>
+    <artifactId>whaleal-sms</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Whaleal SMS</name>
+    <description>多供应商短信服务 SDK - 支持 17+ 供应商，Spring Boot 开箱即用</description>
+    <url>https://whaleal.com</url>
+
+    <organization>
+        <name>whaleal-dev</name>
+        <url>https://whaleal.com</url>
+    </organization>
+
+    <modules>
+        <module>sms-api</module>
+        <module>sms-runtime</module>
+        <module>sms-providers</module>
+        <module>sms-spring-boot-starter</module>
+        <module>sms-all</module>
+    </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hutool.version>5.8.43</hutool.version>
+        <fastjson2.version>2.0.59</fastjson2.version>
+        <lombok.version>1.18.42</lombok.version>
+        <libphonenumber.version>8.13.20</libphonenumber.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
+        <httpclient.version>4.5.14</httpclient.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.whaleal.third</groupId>
+                <artifactId>sms-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.whaleal.third</groupId>
+                <artifactId>sms-runtime</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.whaleal.third</groupId>
+                <artifactId>sms-providers</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.whaleal.third</groupId>
+                <artifactId>sms-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.whaleal.third</groupId>
+                <artifactId>sms-all</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>libphonenumber</artifactId>
+                <version>${libphonenumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <compilerArgs>
+                            <arg>-parameters</arg>
+                        </compilerArgs>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github-whaleal-dev</id>
+            <url>https://maven.pkg.github.com/whaleal-dev/ark-nexus</url>
+        </repository>
+        <snapshotRepository>
+            <id>github-whaleal-dev</id>
+            <url>https://maven.pkg.github.com/whaleal-dev/ark-nexus</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
