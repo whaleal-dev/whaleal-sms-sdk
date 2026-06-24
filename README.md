@@ -2,7 +2,7 @@
 
 多供应商短信 SDK，支持 17 个厂商，统一发信、回执解析、上行回信与状态查询。
 
-**组织：** [whaleal-dev](https://github.com/whaleal-dev) · **仓库：** [whaleal-sms-sdk](https://github.com/whaleal-dev/whaleal-sms-sdk) · **官网：** [whaleal.com](https://whaleal.com)
+**组织：** [whaleal-dev](https://github.com/whaleal-dev) · **仓库：** [whaleal-sms-sdk](https://github.com/whaleal-dev/whaleal-sms-sdk) · **官网：** [whaleal.com](https://whaleal.com) · **QQ 群：** 短信网关 `1021755322`
 
 **Maven 坐标：** `com.whaleal.third:whaleal-sms-sdk:1.0.0`
 
@@ -349,6 +349,31 @@ PhoneValidationResult result = webhookHandler.validatePhone(
 ```bash
 mvn clean test package
 ```
+
+## 未来计划
+
+以下为当前规划方向，欢迎通过 Issue 或 PR 参与讨论与实现。
+
+- **更多短信厂商**：持续接入 Sinch、Bandwidth、SendGrid 等主流通道，完善国内/国际覆盖
+- **推送能力**：在统一消息门面下扩展 APNs、FCM、华为推送等，与短信共用凭证与回调模型
+- **通道容灾**：多厂商自动 failover、按成本/成功率路由
+- **Webhook 安全**：厂商签名校验、重放防护等开箱即用能力
+- **可观测性**：Micrometer 指标、结构化日志与链路追踪集成
+- **文档与示例**：各厂商接入指南、多租户 SaaS 最佳实践
+
+## 社区交流
+
+欢迎加入 QQ 群讨论接入问题、贡献厂商实现或反馈需求。
+
+| 群名称 | 群号 |
+|--------|------|
+| 短信网关 | `1021755322` |
+
+<p align="center">
+  <img src="docs/qq-group.png" alt="QQ 群二维码：短信网关 1021755322" width="280" />
+</p>
+
+<p align="center">扫一扫二维码，加入群聊</p>
 
 ## 许可证
 
