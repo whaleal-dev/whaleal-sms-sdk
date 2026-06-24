@@ -1,10 +1,10 @@
-# Whaleal SMS
+# Whaleal SMS SDK
 
 多供应商短信 SDK，支持 17 个厂商，统一发信、回执解析、上行回信与状态查询。
 
-**组织：** [whaleal-dev](https://github.com/whaleal-dev) · **官网：** [whaleal.com](https://whaleal.com)
+**组织：** [whaleal-dev](https://github.com/whaleal-dev) · **仓库：** [whaleal-sms-sdk](https://github.com/whaleal-dev/whaleal-sms-sdk) · **官网：** [whaleal.com](https://whaleal.com)
 
-**Maven 坐标：** `com.whaleal.third:whaleal-sms:1.0.0`
+**Maven 坐标：** `com.whaleal.third:whaleal-sms-sdk:1.0.0`
 
 > SDK **不读取** `application.yml`。供应商、秘钥、发送方、回调地址等均在**调用时动态传入**。
 
@@ -35,7 +35,7 @@ client.send(SmsSendRequest.builder().to(phone).content("hi").build());
 ## 模块结构
 
 ```
-whaleal-sms/                      # parent pom（artifactId: whaleal-sms）
+whaleal-sms-sdk/                  # parent pom（artifactId: whaleal-sms-sdk）
 ├── sms-api                       # 接口、DTO、枚举、异常（零 Spring）
 ├── sms-runtime                   # 适配器、MOCK、SPI、DefaultSmsClient
 ├── sms-providers                 # 17 厂商 HTTP 实现（Java SPI）

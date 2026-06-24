@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.whaleal.third</groupId>
-        <artifactId>whaleal-sms</artifactId>
+        <artifactId>whaleal-sms-sdk</artifactId>
         <version>1.0.0</version>
     </parent>
 

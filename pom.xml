@@ -12,11 +12,11 @@
     </parent>
 
     <groupId>com.whaleal.third</groupId>
-    <artifactId>whaleal-sms</artifactId>
+    <artifactId>whaleal-sms-sdk</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>Whaleal SMS</name>
+    <name>Whaleal SMS SDK</name>
     <description>多供应商短信服务 SDK - 支持 17+ 供应商，Spring Boot 开箱即用</description>
     <url>https://whaleal.com</url>
 
